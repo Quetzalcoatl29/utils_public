@@ -42,7 +42,7 @@ def storyPoints(tmin,tmax,prior,risk,exper):
             if prior == 'medio':
                 p=0.8
             else:
-                p=1           
+                p=0.3           
             
         else:
             print(f'Los parametros aceptados son bajo,medio,alto \n Y tu ingresaste {prior!r}')
