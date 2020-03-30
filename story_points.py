@@ -61,7 +61,7 @@ def storyPoints(tmin,tmax,prior,risk,exper):
         if (exper =='muy alta' or exper =='alta' or exper == 'media' or exper == 'baja'):
             if exper =='muy alta':
                 ex=1
-            if exper == 'baja':
+            if exper == 'alta':
                 ex=0.7
             if exper == 'media':
                 ex = 0.5
