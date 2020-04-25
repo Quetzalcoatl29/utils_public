@@ -18,13 +18,13 @@ def storyPoints(tmin,tmax,prior,risk,exper):
     tmin : TYPE:float betweet (0,15])
         DESCRIPTION.ideal time estimation in days
     tmax : TYPE:float betweet (0,15])
-        DESCRIPTION. whorse case time estimation
+        DESCRIPTION. whorst case time estimation
     prior : TYPE:str
-        DESCRIPTION. piority of task
+        DESCRIPTION. piority of task ("alto"-> high , "medio"-> normal , "bajo"->Low)
     risk : TYPE:str
-        DESCRIPTION. risk of the task
+        DESCRIPTION. risk of the task ("alto"-> high , "medio"-> normal , "bajo"->Low)
     exper : TYPE:str
-        DESCRIPTION. user experience 
+        DESCRIPTION. user experience ("muy alto"-->"you know everything","alto"-> high , "medio"-> normal , "bajo"->Low)
 
     Returns
     -------
@@ -58,12 +58,12 @@ def storyPoints(tmin,tmax,prior,risk,exper):
         else:
             print(f'Los parametros aceptados son bajo,medio,alto \n Y tu ingresaste {risk!r}')
             
-        if (exper =='muy alta' or exper =='alta' or exper == 'media' or exper == 'baja'):
-            if exper =='muy alta':
+        if (exper =='muy alto' or exper =='alto' or exper == 'medio' or exper == 'bajo'):
+            if exper =='muy alto':
                 ex=1
-            if exper == 'alta':
+            if exper == 'alto':
                 ex=0.7
-            if exper == 'media':
+            if exper == 'medio':
                 ex = 0.5
             
             else:
@@ -73,9 +73,9 @@ def storyPoints(tmin,tmax,prior,risk,exper):
             step2=step1/ex
             sp_raw=round(step2,2)
             if sp_raw<=1.5:
-                sp = 1
+                sp = 3
             elif sp_raw<=2.5:
-                sp=2
+                sp=3
             elif sp_raw<=3.5:
                 sp=3
             elif sp_raw <=6.5:
